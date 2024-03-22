@@ -1,0 +1,36 @@
+<div class="employee">
+    <button class="btn btn-primary" routerLink="/employees/new">Add New Employee</button>
+    <br><br>
+    <form [formGroup]="searchForm"  (ngSubmit)="search()" class="col-sm-4">
+        <div class="input-group mb-3">
+            <input type="search" class="form-control" formControlName="search" placeholder="Enter ID or Name" aria-describedby="button-addon2">
+            <button class="btn btn-outline-light" type="submit" id="button-addon2">Search</button>
+        </div>
+    </form>
+    <h3>List of Employee</h3>
+    <div class="col-sm-9">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Employee ID</th>
+                    <th scope="col">Employee Name</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Supervisors</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees" class="table-dark">
+                    <td scope="col">{{ employee.employeeId }}</td>
+                    <td scope="col">{{ employee.name }}</td>
+                    <td scope="col">{{ employee.phoneNumber }}</td>
+                    <td scope="col">{{ employee.supervisors }}</td>
+                    <td scope="col">
+                        <button class="btn btn-link" routerLink="/employees/{{employee.employeeId}}/edit"><i>Edit</i></button>
+                        <button class="btn btn-link" (click)="delete(employee.employeeId)"><i>Delete</i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
