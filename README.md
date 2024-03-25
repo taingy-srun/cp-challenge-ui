@@ -5,6 +5,7 @@ This project is for the CP-Challenge
 ## Features:
 - Login
 - Perform CRUD operations on Employee model
+- Search employees by name or ID
 
 ## Development server
 
