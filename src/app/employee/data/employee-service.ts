@@ -10,7 +10,7 @@ import { environment } from 'src/environments/enviroment.development';
   })
 export class EmployeeService {
 
-    _baseUrl=  environment.api_base_url + "/employees";
+    _baseUrl=  environment.api_base_url + "api/employees";
 
     constructor(private _http: HttpClient) {}
     

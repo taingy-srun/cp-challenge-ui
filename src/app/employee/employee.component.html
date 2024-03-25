@@ -1,14 +1,14 @@
 <div class="employee">
     <button class="btn btn-primary" routerLink="/employees/new">Add New Employee</button>
     <br><br>
-    <form [formGroup]="searchForm"  (ngSubmit)="search()" class="col-sm-4">
+    <form [formGroup]="searchForm"  (ngSubmit)="search()" class="col-sm-5">
         <div class="input-group mb-3">
             <input type="search" class="form-control" formControlName="search" placeholder="Enter ID or Name" aria-describedby="button-addon2">
             <button class="btn btn-outline-light" type="submit" id="button-addon2">Search</button>
         </div>
     </form>
     <h3>List of Employee</h3>
-    <div class="col-sm-9">
+    <div>
         <table class="table table-hover">
             <thead>
                 <tr>

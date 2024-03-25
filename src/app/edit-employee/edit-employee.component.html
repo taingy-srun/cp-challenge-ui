@@ -1,7 +1,7 @@
 <div class="employee">
     <h3>Updating Employee</h3>
     <br/>
-    <div class="form-group col-sm-3">
+    <div class="form-group col-sm-5">
         <form [formGroup]="updateForm" (ngSubmit)="save(updateForm)">
             <label class="form-label">Name (*):</label>
             <input class="form-control" formControlName="name"  placeholder="Full Name" required/>
