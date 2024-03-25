@@ -4,7 +4,7 @@ This project is for the CP-Challenge
 
 ## Features:
 - Login
-- CRUD opartion on Employee
+- Perform CRUD operations on Employee model
 
 ## Development server
 
